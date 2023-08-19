@@ -123,8 +123,8 @@ export default function createMapboxGL(prop: MapboxGL) {
   // replace layers
   layers.forEach((lyr) => {
     const { layers, sources, popup } = lyr;
-    const { id, source } = sources;
-    const { title, layer } = layers;
+    const { id } = sources;
+    const { title } = layers;
 
     const layerHTML = createLayer(lyr);
     const popupHTML = createPopup(id, title, popup);
