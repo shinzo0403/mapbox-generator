@@ -1,0 +1,48 @@
+{
+  "name": "@shinzo0403/mapbox-generator",
+  "version": "1.0.0",
+  "description": "instantly visualize geojson data on the map",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "ts-esm": "node --experimental-specifier-resolution=node --max_old_space_size=16000 --loader ts-node/esm",
+    "update": "git add . && git commit -am 'new version' && npm version patch && npm i",
+    "clean": "rm -rf dist",
+    "build": "npm run clean ; tsc",
+    "bp": "npm run build ; npm run update",
+    "prepare": "npm run build"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shizno0403/mapbox-generator.git",
+    "directory": "mapbox-generator/dist"
+  },
+  "keywords": [
+    "geojson",
+    "mapbox",
+    "visualization"
+  ],
+  "homepage": "https://github.com/shinzo0403/mapbox-generator/blob/master/README.md",
+  "author": "Shin Tanaka",
+  "license": "MIT",
+  "dependencies": {
+    "@jest/globals": "^29.5.0",
+    "fs": "^0.0.1-security",
+    "mapbox-gl": "^2.15.0",
+    "npm": "^8.17.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.8",
+    "@types/mapbox-gl": "^2.7.13",
+    "jest": "^28.1.3",
+    "ts-jest": "^28.0.8"
+  }
+}
