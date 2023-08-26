@@ -1,6 +1,6 @@
 {
   "name": "@shinzo0403/mapbox-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "instantly visualize geojson data on the map",
   "type": "module",
   "main": "dist/index.js",
